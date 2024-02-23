@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-def create_bar(height, width, color):
+def create_bar(height: int, width: int, color: list) -> np.ndarray | tuple:
     bar = np.zeros((height, width, 3), np.uint8)
     bar[:, :] = color
     red, green, blue = int(color[2]), int(color[1]), int(color[0])
